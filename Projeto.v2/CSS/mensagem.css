@@ -1,0 +1,19 @@
+@media (max-width: 1080px)
+{
+    .formatacao{
+        margin-top: 5px;
+        width: 100%;
+    }
+    .scrol{
+        margin-top: 105px;
+    }
+    .user{
+        display: flex;
+    }
+    .mensagem{
+        font-size: 15px;
+    }
+    .nome{
+        font-weight: 700;
+    }
+}
