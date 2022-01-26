@@ -1,6 +1,6 @@
 var i = 1;
-var nomes=["João Antonio","Raquel Maria","Rafael Antonio","Mario Andrade","Rafaela Simone",
-"Rita Perreira","Guilherme Reis","Helena Gomes"]
+import nomes from './informacao.class.js'
+
 while (i <= 7) {
     
     var feed=document.getElementById('feed')
