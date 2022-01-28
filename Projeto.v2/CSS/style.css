@@ -4,15 +4,38 @@
     margin-right: auto;
 }*/
 
+body{
+    margin: 0;
+}
 .loginbox{
-    background-color:white;
-    
+    background-color:rgb(255, 9, 9);
+   
 }
 .loginbox .login_itens{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    height: 100%;
+    
 }
-.loginbox .login_itens .itens{
-    width: 25%;
+
+.login_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-top: 100px;
+}
+ .label_text{
+color: blue;
+display: inline-block;
+
+}
+.loginbox .login_itens img{
+    width: 390px;
+    height: 300px;
+    object-fit: cover;
+    
 }
