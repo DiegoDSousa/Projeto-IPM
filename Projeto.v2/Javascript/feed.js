@@ -1,8 +1,8 @@
 var i = 1;
-import nomes from './informacao.class.js'
+import nomes from './informacao.class.js';
 
-while (i <= 7) {
-    
+
+function criar(){  
     var feed=document.getElementById('feed')
     var scrol=document.getElementById('conteudo')
 
@@ -27,7 +27,7 @@ while (i <= 7) {
     div_foto.classList.add("foto")
     perfil.classList.add("perfil")
     icone_img.classList.add("editar")
-    
+
     feed.append(scrol)
     scrol.append(publicacao)
     nome.append(nomes[i])
@@ -35,11 +35,12 @@ while (i <= 7) {
     header.append(perfil,nome,icone)
     div_foto.append(foto_publicada)
     footer.append(gosto,comentar,partilhar)
-
     publicacao.append(header)
     publicacao.append(div_foto)
     publicacao.append(footer)
     publicacao.append(divisao)
+
+    nome.setAttribute("onclick","abrirPerfil()")
 
     partilhar.alt="partilhar"
     perfil.alt="foto_perfil"
@@ -52,10 +53,13 @@ while (i <= 7) {
     gosto.src="../Imagens/Icones/Gosto.svg"
     comentar.src="../Imagens/Icones/comentario.svg"
     partilhar.src="../Imagens/Icones/partilhar.svg"
-    
 
+
+}  
+
+while (i <= 7) {
+    criar()
     i = i + 1;
-}
-    
-   
+}          
+
 
