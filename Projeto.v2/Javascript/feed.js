@@ -1,7 +1,6 @@
 var i = 1;
 import nomes from './informacao.class.js';
 
-
 function criar(){  
     var feed=document.getElementById('feed')
     var scrol=document.getElementById('conteudo')
@@ -27,6 +26,7 @@ function criar(){
     div_foto.classList.add("foto")
     perfil.classList.add("perfil")
     icone_img.classList.add("editar")
+    nome.classList.add("nome")
 
     feed.append(scrol)
     scrol.append(publicacao)
@@ -60,6 +60,7 @@ function criar(){
 while (i <= 7) {
     criar()
     i = i + 1;
-}          
+}  
+       
 
 

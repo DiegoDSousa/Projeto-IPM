@@ -36,10 +36,17 @@
     
     <script>
         function abrirPerfil(){
-            window.location="perfil.html"
             
+            var nome=document.querySelector(".nome")
             
-        }
+            nome.addEventListener("click",function(e){
+                var elemento= e.target
+                elemento.classList.add("riscado")
+                localStorage.setItem('nome','teste')
+                window.location="perfil.html"
+            })
+            
+        } 
     </script>
 </body>
 </html>
