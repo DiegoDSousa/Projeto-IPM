@@ -5,9 +5,14 @@
 }*/
 
 .loginbox{
-    background-color:green;
+    background-color:white;
+    
 }
 .loginbox .login_itens{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+}
+.loginbox .login_itens .itens{
+    width: 25%;
 }
