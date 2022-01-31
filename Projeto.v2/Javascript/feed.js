@@ -1,6 +1,5 @@
 var i = 1;
 import nomes from './informacao.class.js';
-
 function criar(){  
     var feed=document.getElementById('feed')
     var scrol=document.getElementById('conteudo')
@@ -9,6 +8,7 @@ function criar(){
     var header=document.createElement('DIV')
     var perfil=document.createElement('IMG')
     var nome=document.createElement('P')
+    var teste=document.createElement('P')
     var icone=document.createElement('P')
     var icone_img=document.createElement('IMG')
     var footer=document.createElement('DIV')
@@ -29,8 +29,9 @@ function criar(){
     nome.classList.add("nome")
 
     feed.append(scrol)
+    nome.append(teste)
     scrol.append(publicacao)
-    nome.append(nomes[i])
+    teste.append(nomes[i])
     icone.append(icone_img)
     header.append(perfil,nome,icone)
     div_foto.append(foto_publicada)

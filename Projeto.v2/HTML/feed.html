@@ -37,15 +37,21 @@
     <script>
         function abrirPerfil(){
             
-            var nome=document.querySelector(".nome")
             
-            nome.addEventListener("click",function(e){
+            addEventListener("click",function(e){
                 var elemento= e.target
-                elemento.classList.add("riscado")
-                localStorage.setItem('nome','teste')
-                window.location="perfil.html"
+                elemento.id="riscado"
+                var aqui=document.getElementById("riscado").innerHTML
+                console.log(foto)
+
+                localStorage.nome=aqui
+                
+                console.log(aqui)
             })
+           window.location="perfil.html"
+
             
+           
         } 
     </script>
 </body>
