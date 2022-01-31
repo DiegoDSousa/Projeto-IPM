@@ -1,0 +1,12 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.header{
+    display: flex;
+}
+.header .conteudo{
+    display: flex;
+    flex-direction: column;
+    
+}
