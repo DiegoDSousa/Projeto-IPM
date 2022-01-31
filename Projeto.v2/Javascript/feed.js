@@ -1,4 +1,4 @@
-var i = 1;
+var i = 0;
 import nomes from './informacao.class.js';
 function criar(){  
     var feed=document.getElementById('feed')
