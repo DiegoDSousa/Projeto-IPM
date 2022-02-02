@@ -41,9 +41,9 @@ body{
     color:#D7E365
 }
 
-.mapa{
+#mapa{
   display: block;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+
 }
