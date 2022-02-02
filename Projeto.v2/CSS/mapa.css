@@ -30,10 +30,7 @@ body{
     
 }
 
-.setings #perfil_img{
-    /*clip: rect(40px,40px,40px,40px);*/
-    
-}
+
 .main .table{
     display: flex;
     justify-content: center;
