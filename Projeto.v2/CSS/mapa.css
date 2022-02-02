@@ -19,12 +19,19 @@ body{
     display: flex;
 }
 .setings .top_left{
-    margin-left: auto;
-    margin-left: 0;
+   /* margin-left: auto;
+    margin-left: 0;*/
+    align-self: flex-end;
 }
 
 .setings .top_right{
     margin-right: auto;
+   /* align-self: flex-start;*/
+    
+}
+
+.setings #perfil_img{
+    /*clip: rect(40px,40px,40px,40px);*/
     
 }
 .main .table{
