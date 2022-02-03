@@ -58,7 +58,7 @@ function criarDestaques(){
     titulo.classList.add("titulo")
 
     //atribuindo valores
-    titulo.append("destaques")
+    titulo.append("Destaques")
     
 }
 
@@ -79,7 +79,7 @@ function criarEstatisticas(){
     titulo.classList.add("titulo")
 
     //atribuindo valores
-    titulo.append("estatisticas")
+    titulo.append("Estatisticas")
     
 }
 
@@ -113,28 +113,60 @@ function criarRotas(){
     container.classList.add("containerRotas")
 
     //atribuindo valores
-    titulo.append("rotas")
+    titulo.append("Rotas")
     
     
+}
+function aleatorio(){
+        const random= (min,max) => Math.floor(Math.random()*(max-min)+min)
+        
+        return(random(0,12))
 }
 
 function criarGaleria(){
     //criando os elementos
-    var destaques=document.getElementById('galeria')
+    var galeria=document.getElementById('galeria')
     var titulo=document.createElement('H2')
     var container=document.createElement('DIV')
 
     //adicionando os elementos
-    destaques.append(titulo)
-    destaques.append(container)
+    galeria.append(titulo)
+    galeria.append(container)
     
 
     //adicionando classes aos elementos
 
     titulo.classList.add("titulo")
-
+    container.classList.add("publicacao")
     //atribuindo valores
-    titulo.append("galeria")
+    titulo.append("Galeria")
+
+    var contfotos=0
+    while(contfotos<=6){
+        var verificar=[]
+        var foto=document.createElement('IMG')
+        var containerfoto=document.createElement('DIV')
+
+        containerfoto.append(foto)
+        container.append(containerfoto)
+
+        foto.classList.add("foto_publicada")
+        containerfoto.classList.add("foto")
+        /*
+        var valor=aleatorio()
+        if (valor in verificar){
+            valor=aleatorio()
+            console.log(valor)
+        }
+       
+        
+        var teste=verificar.push(valor)
+        console.log(teste)*/
+        foto.src="../Imagens/fotosgaleria/galeria"+ aleatorio()+".png"
+        foto.alt="imagem da galeria"+aleatorio()
+        
+        contfotos=contfotos+1
+    }
     
 }
 
