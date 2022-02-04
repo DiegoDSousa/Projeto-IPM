@@ -10,6 +10,11 @@ body{
 
     overflow-x: hidden;
     overflow-y: hidden;
+
+    background-image: url(../Imagens/Imagenspublicadas/bg_login_img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
 }
 * body{
     box-sizing: border-box;
@@ -23,20 +28,105 @@ body{
 
     width: 100vw;
     height: 100vh;
-    background-image: url(../Imagens/Imagenspublicadas/bg_login_img.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%
-    /*background-image: linear-gradient(#FFFFFF, #FCFFDD)*/    
+}
+
+.box_login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    background-image: linear-gradient(#FFFFFF, #FCFFDD);
+    box-shadow: 0px 10px 20px #c6e48d63;
+    padding: 50px;
+    border-radius: 20px;
+}
+
+.box_login .login_data{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+.main .login_data{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+.login_data label{
+font-weight: 800;
+color:#A9B722;
+margin-bottom: 5px;
+}
+.login_data input{
+    width: 80vw;
+    max-width: 400px;
+    height: 50px;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    color:#A9B722;
+    background-color:#CADA32 ;
+    box-shadow: 0px 10px 20px #7a832d8f;
+}
+
+.login_data input::placeholder{
+    color:#A9B722;
+    font-size:15px;
+    padding-left: 10px;
 }
 
 
 
 
 
+.main .login_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    color:#A9B722 ;
+    margin-top: 50px;
 
+    width: 70vw;
+    height: 75px;
+    max-width: 300px;
+    border-style: solid;
+    border-radius: 20px;
+    border-color:#CADA32;
 
+    cursor: pointer;
 
+    background-color:#00000000;
+    
+    transform: 1s;
+}
+.main .login_button:hover{
+    background-color:#CADA32;
+    box-shadow: 0px 10px 20px #7a832d8f;
+}
+
+.login_rediretc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.login_rediretc a{
+  color:#A9B722;
+  text-decoration: none;
+}
+
+.login_rediretc a:hover{
+    text-decoration: underline;
+}
 
 
 
