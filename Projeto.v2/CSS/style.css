@@ -14,7 +14,7 @@ body{
     background-image: url(../Imagens/Imagenspublicadas/bg_login_img.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center center;
+    /*background-position: center center;*/
 }
 * body{
     box-sizing: border-box;
