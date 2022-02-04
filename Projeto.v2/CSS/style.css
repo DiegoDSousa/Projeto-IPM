@@ -141,43 +141,34 @@ body{
     justify-content: center;
     align-items: center;
 
-    width: 100vw;
-    height: 100vh;
-    background-image: linear-gradient(#FFFFFF, #FCFFDD);    
+    width: 80vw;
+    height: 80vh;
+    background-image: linear-gradient(#FFFFFF, #FCFFDD);   
+    position: fixed; 
 }
 .main .left{
-margin-right: 15%;  
-margin-left: 15%;
-width: 50vw;
-height: 50vh;
-
+    width: 700px; 
+    height: 400px;
+    background-image: url(../Imagens/Imagenspublicadas/img_login.png);
+    background-repeat: no-repeat;
 }
 .main .rigth{
-    margin-left: 1%;
-    width: 50vw; 
-    height: 50vh;
-}
-.main img{
-
-    width: 720px;
-    height: 420px;
-    border-bottom-right-radius:10px;
-    border-bottom-left-radius:10px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
     
+    width: 50%; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-style:solid;
+    border-color: red;
 }
-.main .form_itens{
+main .form_itens{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 
-    max-width: 300px;
-    width: 80vw;
-    height: 35vh;
-    
-    
 }
 .form_itens form{
     margin-left: 0;
@@ -187,7 +178,6 @@ height: 50vh;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 100%;
     margin-top: 20px;
 }
 .login_data label{
@@ -196,8 +186,7 @@ color:#A9B722;
 margin-bottom: 5px;
 }
 .login_data input{
-    width: 80vw;
-    max-width: 400px;
+    width: 400px;
     height: 50px;
     border-radius: 4px;
     outline: none;
@@ -220,7 +209,7 @@ margin-bottom: 5px;
 
     color:#A9B722 ;
 
-    width: 70vw;
+    width: 70%;
     height: 75px;
     max-width: 300px;
     border-style: solid;
@@ -240,12 +229,12 @@ margin-bottom: 5px;
 
 .login_rediretc{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 12vw;
-    flex-direction: row;
-    margin-top: 30px;
-    margin-bottom: 10px;
+    flex-direction: column;
+    width: 70vw;
+    height: 75px;
+    max-width: 300px;
 }
 
 .login_rediretc a{
