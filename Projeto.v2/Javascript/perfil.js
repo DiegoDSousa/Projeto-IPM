@@ -146,22 +146,32 @@ function criarGaleria(){
         var verificar=[]
         var foto=document.createElement('IMG')
         var containerfoto=document.createElement('DIV')
+        var nome=document.createElement('P')
+        var header=document.createElement('DIV')
+        var perfil=document.createElement('IMG')
+        var teste=document.createElement('P')
+        var icone=document.createElement('P')
+        
+        var icone_img=document.createElement('IMG')
 
-        containerfoto.append(foto)
-        container.append(containerfoto)
 
         foto.classList.add("foto_publicada")
         containerfoto.classList.add("foto")
-        /*
-        var valor=aleatorio()
-        if (valor in verificar){
-            valor=aleatorio()
-            console.log(valor)
-        }
-       
+        perfil.classList.add("perfil")
+        nome.classList.add("nome")
+        header.classList.add("headerfoto")
+
+        teste.append(nomes[i])
+        icone.append(icone_img)
+        nome.append(teste)
+        header.append(perfil,nome,icone)
+        containerfoto.append(header,foto)
+        container.append(containerfoto)
         
-        var teste=verificar.push(valor)
-        console.log(teste)*/
+        perfil.src="../Imagens/Imagensperfilpequenas/perfil"+ i +".png"
+        icone_img.src="../Imagens/Icones/editar.svg"
+        perfil.alt="foto_perfil"
+
         foto.src="../Imagens/fotosgaleria/galeria"+ aleatorio()+".png"
         foto.alt="imagem da galeria"+aleatorio()
         
