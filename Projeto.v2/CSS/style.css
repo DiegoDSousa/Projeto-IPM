@@ -1,4 +1,4 @@
-@media only screen and (max-width: 600px){
+
 body{
     display: flex;
     flex-direction: column;
@@ -23,13 +23,13 @@ body{
 
     width: 100vw;
     height: 100vh;
-    background-image: linear-gradient(#FFFFFF, #FCFFDD);    
+    background-image: url(../Imagens/Imagenspublicadas/bg.jpg);
+    /*background-image: linear-gradient(#FFFFFF, #FCFFDD)*/    
 }
 
 .main .left{
     width: 100%; 
     height: 50%;
-    background-image: url(../Imagens/Imagenspublicadas/img_login.png);
     background-repeat: no-repeat;
 }
 .main .rigth{
@@ -128,5 +128,4 @@ margin-bottom: 5px;
 }
 
 
-}
-/*-----------------------------------------------------------------   PC--------------------------------------------------- */
+
