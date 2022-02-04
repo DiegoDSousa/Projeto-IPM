@@ -1,5 +1,12 @@
+@font-face { font-family: BakbakOne; src: url('../Fonts/Anime\ Inept.otf'); } 
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
+    font-family: BakbakOne;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,9 +23,7 @@ body{
     background-size: cover;
     /*background-position: center center;*/
 }
-* body{
-    box-sizing: border-box;
-}
+
 
 .main{
     display: flex;
@@ -29,7 +34,14 @@ body{
     width: 100vw;
     height: 100vh;
 }
+.main img{
+    align-self: center;
+    max-width: 350px;
+    width: 50vw;
+    object-fit: cover;
 
+    
+}
 .box_login{
     display: flex;
     flex-direction: column;
@@ -39,7 +51,12 @@ body{
     background-image: linear-gradient(#FFFFFF, #FCFFDD);
     box-shadow: 0px 10px 20px #c6e48d63;
     padding: 50px;
-    border-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    
+    
 }
 
 .box_login .login_data{
@@ -76,8 +93,8 @@ margin-bottom: 5px;
 
 .login_data input::placeholder{
     color:#A9B722;
-    font-size:15px;
-    padding-left: 10px;
+    padding: 12px 20px;
+    margin: 8px 0;
 }
 
 
@@ -128,112 +145,20 @@ margin-bottom: 5px;
     text-decoration: underline;
 }
 
-
-
-
-
-
-
-/*
-.main .left{
-    width: 100%; 
-    height: 50%;
-    background-repeat: no-repeat;
-}
-.main .rigth{
-    
-    width: 100%; 
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-    border-style:solid;
-    border-color: red;
-}
-
-
-.main .form_itens{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    max-width: 300px;
-    width: 80vw;
-    height: 50vh;
-    
-    
-}
-
-.main .login_data{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    margin-top: 20px;
-}
-.login_data label{
-font-weight: 800;
-color:#A9B722;
-margin-bottom: 5px;
-}
-.login_data input{
-    width: 80vw;
-    max-width: 400px;
-    height: 50px;
-    border-radius: 4px;
-    outline: none;
-    border: none;
-    color:#A9B722;
-    background-color:#CADA32 ;
-    box-shadow: 0px 10px 20px #7a832d8f;
-}
-
-.login_data input::placeholder{
-    color:#A9B722;
-    font-size:15px;
-    padding-left: 10px;
-}
-
-.main .login_button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    color:#A9B722 ;
-
-    width: 70vw;
-    height: 75px;
-    max-width: 300px;
-    border-style: solid;
-    border-radius: 20px;
-    border-color:#CADA32;
-
-    cursor: pointer;
-
-    background-color:#00000000;
-    
-    transform: 1s;
-}
-.main .login_button:hover{
-    background-color:#CADA32;
-    box-shadow: 0px 10px 20px #7a832d8f;
-}
-
-.login_rediretc{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 30px;
-    margin-bottom: 10px;
-}
-
-.login_rediretc a{
-  color:#A9B722;
-}
-
-*/
-
+@media only screen and (max-width: 500px) {
+    .main{
+        margin-bottom: 0;
+        justify-content: flex-end;
+    }
+    .box_login{
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        
+    }
+    .main img{
+        align-self: center;
+        max-width: 350px;
+        width: 70vw;
+        object-fit: cover;
+    }
+  }
