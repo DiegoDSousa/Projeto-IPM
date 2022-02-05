@@ -13,7 +13,6 @@ body{
     justify-content: center;
     align-items: center;
 
-    margin: 0;
     min-height: 100vh;
 
     overflow-x: hidden;
@@ -44,7 +43,6 @@ body{
     width: 50vw;
     object-fit: cover;
 
-    
 }
 
 .form_box{
@@ -52,16 +50,14 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    background-image: linear-gradient(#FFFFFF, #FCFFDD);
-    box-shadow: 0px 10px 20px #c6e48d63;
-    padding: 40px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
-    
-    
+
+    background-image: linear-gradient(#FFFFFF, #FCFFDD);
+    box-shadow: 0px 10px 20px #c6e48d63;
+    padding: 40px;
 }
 
 .form_box span{
@@ -79,7 +75,6 @@ body{
     align-items: flex-start;
     margin-top: 10px;
     margin-bottom: 10px;
-     
 }
 .redite_data label{
     font-weight: 800;
@@ -92,17 +87,23 @@ body{
     width: 80vw;
     max-width: 400px;
     height: 50px;
+
+    padding: 12px 20px;
+    
+
+    font-size: 15px;
+    font-weight: 700;
+
     border-radius: 4px;
-    outline: none;
-    border: none;
+    
     color:#A9B722;
     background-color:#CADA32 ;
     box-shadow: 0px 10px 20px #7a832d8f;
+    outline: none;
+    border: none;
 }
 .redite_data input::placeholder{
-    color:#A9B722;
-    padding: 12px 20px;
-    margin: 8px 0;
+    color:#a8b7228a;
 }
 
 .redite_data .sumit_button{
@@ -112,7 +113,6 @@ body{
     align-self:center;
 
     margin-bottom: 5px;
-    
     margin-top: 50px;
 
     width: 150px;
@@ -120,11 +120,9 @@ body{
     border-style: solid;
     border-radius: 20px;
     border-color:#CADA32;
+    background-color:#00000000;
 
     cursor: pointer;
-
-    background-color:#00000000;
-    
     transform: 1s;
 }
 
@@ -134,21 +132,21 @@ body{
 }
 
 .sumit_button a:link{
-    letter-spacing: 1px;
     font-weight: 600;
     color:#A9B722;
+    letter-spacing: 1px;
     text-decoration: none;
 }
 .sumit_button a:active{
-    letter-spacing: 1px;
     font-weight: 600;
     color:#A9B722;
+    letter-spacing: 1px;
     text-decoration: none;
 }
 .sumit_button a:visited{
-    letter-spacing: 1px;
     font-weight: 600;
     color:#A9B722;
+    letter-spacing: 1px;
     text-decoration: none;
 
 }

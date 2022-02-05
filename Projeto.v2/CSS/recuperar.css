@@ -13,7 +13,6 @@ body{
     justify-content: center;
     align-items: center;
 
-    margin: 0;
     min-height: 100vh;
 
     overflow-x: hidden;
@@ -42,9 +41,7 @@ body{
     align-self: center;
     max-width: 350px;
     width: 50vw;
-    object-fit: cover;
-
-    
+    object-fit: cover;   
 }
 .box_recuperar{
     display: flex;
@@ -52,15 +49,14 @@ body{
     justify-content: center;
     align-items: center;
     
-    background-image: linear-gradient(#FFFFFF, #FCFFDD);
-    box-shadow: 0px 10px 20px #c6e48d63;
-    padding: 50px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
-    
-    
+
+    background-image: linear-gradient(#FFFFFF, #FCFFDD);
+    box-shadow: 0px 10px 20px #c6e48d63;
+    padding: 50px;
 }
 .box_recuperar span{
     font-size: 20px;
@@ -73,8 +69,7 @@ body{
 .box_recuperar .recuperar_data{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-     
+    align-items: flex-start;  
 }
 .recuperar_data label{
     font-weight: 800;
@@ -86,18 +81,23 @@ body{
     width: 80vw;
     max-width: 400px;
     height: 50px;
+    
+    padding: 12px 20px;
+    
+
+    font-size: 15px;
+    font-weight: 700;
+
     border-radius: 4px;
-    outline: none;
-    border: none;
     color:#A9B722;
     background-color:#CADA32 ;
     box-shadow: 0px 10px 20px #7a832d8f;
+    outline: none;
+    border: none;
 }
     
 .recuperar_data input::placeholder{
-    color:#A9B722;
-    padding: 12px 20px;
-    margin: 8px 0;
+   color:#a8b7228a;
 }
 
 
@@ -115,7 +115,6 @@ body{
     align-items:center;
 
     margin-bottom: 5px;
-    
     margin-top: 50px;
 
     width: 150px;
@@ -123,12 +122,11 @@ body{
     border-style: solid;
     border-radius: 20px;
     border-color:#CADA32;
+    background-color:#00000000;
 
     cursor: pointer;
-
-    background-color:#00000000;
-    
     transform: 1s;
+    
 }
 
 .box_rediretc .rediretc_button:hover{
@@ -143,15 +141,15 @@ body{
     text-decoration: none;
 }
 .rediretc_button a:active{
-    letter-spacing: 1px;
     font-weight: 600;
     color:#A9B722;
+    letter-spacing: 1px;
     text-decoration: none;
 }
 .rediretc_button a:visited{
-    letter-spacing: 1px;
     font-weight: 600;
     color:#A9B722;
+    letter-spacing: 1px;
     text-decoration: none;
 
 }
