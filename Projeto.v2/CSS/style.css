@@ -81,6 +81,10 @@ margin-bottom: 5px;
 letter-spacing: 5px;
 }
 .login_data input{
+    padding: 12px 20px;
+    margin: 8px 0;
+    font-size: 15px;
+    font-weight: 700;
     width: 80vw;
     max-width: 400px;
     height: 50px;
@@ -93,9 +97,8 @@ letter-spacing: 5px;
 }
 
 .login_data input::placeholder{
-    color:#A9B722;
-    padding: 12px 20px;
-    margin: 8px 0;
+    color:#a8b7228a;
+    
 }
 .login_button a:link{
     letter-spacing: 5px;
