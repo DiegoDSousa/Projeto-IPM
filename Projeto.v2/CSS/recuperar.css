@@ -143,13 +143,13 @@ body{
     text-decoration: none;
 }
 .rediretc_button a:active{
-    letter-spacing: 5px;
+    letter-spacing: 1px;
     font-weight: 600;
     color:#A9B722;
     text-decoration: none;
 }
 .rediretc_button a:visited{
-    letter-spacing: 5px;
+    letter-spacing: 1px;
     font-weight: 600;
     color:#A9B722;
     text-decoration: none;
