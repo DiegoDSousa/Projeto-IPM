@@ -94,8 +94,25 @@ letter-spacing: 5px;
     padding: 12px 20px;
     margin: 8px 0;
 }
+.login_button a:link{
+    letter-spacing: 5px;
+    font-weight: 800;
+    color:#A9B722;
+    text-decoration: none;
+}
+.login_button a:active{
+    letter-spacing: 5px;
+    font-weight: 800;
+    color:#A9B722;
+    text-decoration: none;
+}
+.login_button a:visited{
+    letter-spacing: 5px;
+    font-weight: 800;
+    color:#A9B722;
+    text-decoration: none;
 
-
+}
 
 
 
@@ -104,10 +121,9 @@ letter-spacing: 5px;
     justify-content: center;
     align-items: center;
 
-    font-weight: 800;
-    color:#A9B722;
+   
     margin-bottom: 5px;
-    letter-spacing: 5px;
+    
     margin-top: 50px;
 
     width: 70vw;
