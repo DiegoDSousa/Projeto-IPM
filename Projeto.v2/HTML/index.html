@@ -5,15 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/style.css">
-    <title>LOGIN</title>
+    <title>Login</title>
 </head>
 <body>
-    <form action="feed.html" class="loginForm">
-        <input type="text" placeholder="E-mail">
-        <input type="text" placeholder="Password">
-        <button type="submit">Login</button>
-        <a href="recuperar.html">Forget Password</a>
-        <a href="cadastrar.html">Cadastrar</a>
-    </form>
+    <div class="main">
+    <a href="#"><img src="../Imagens/Icones/logo.png" alt="perfil"></a>   
+    <div class="box_login">
+        <div class="form_itens">
+            <form action="feed.html">
+                <div class="login_data">
+                    <label for="E-mail">E-mail</label>
+                    <input type="email" placeholder="E-mail">  
+                </div>
+                <div class="login_data">
+                   <label for="Password">Password</label>
+                   <input type="Password" placeholder="Password">  
+               </div>
+        
+        </div>
+       
+        </form>
+        <div class="login_button">Login</div>
+        
+        <div class="login_rediretc">
+            <a href="recuperar.html">Recuperar Password</a>
+            <a href="cadastrar.html">Cadastrar</a>
+        </div>
+    </div>  
+   </div>
+
 </body>
 </html>

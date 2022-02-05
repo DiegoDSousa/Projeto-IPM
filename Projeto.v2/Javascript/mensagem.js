@@ -15,6 +15,7 @@ foto.classList.add("perfil")
 mostrar.classList.add("scrol")
 conteudo.classList.add("conteudo","formatacao")
 user.classList.add("user")
+foto.classList.add("teste")
 paragrafo_sms.classList.add("mensagem")
 paragrafo_nome.classList.add("nome")
 
