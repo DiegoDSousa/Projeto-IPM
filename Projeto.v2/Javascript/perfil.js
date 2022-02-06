@@ -68,16 +68,20 @@ function criarEstatisticas(){
     var destaques=document.getElementById('estatisticas')
     var titulo=document.createElement('H2')
     var container=document.createElement('DIV')
-
+    var paragrafo=document.createElement('P')
+    var container2=document.createElement('DIV')
+    var lista=document.createElement('OL')
+    var elemento=document.createElement('LI')
     //adicionando os elementos
-    destaques.append(titulo)
-    destaques.append(container)
-    
+    destaques.append(titulo,container)
+    container.append(paragrafo,container2)
 
     //adicionando classes aos elementos
 
     titulo.classList.add("titulo")
-
+    container2.classList.add("skils__bar")
+    container2.classList.add("skills__bar--70")
+    container.classList.add("skils")
     //atribuindo valores
     titulo.append("Estatisticas")
     
@@ -151,7 +155,6 @@ function criarGaleria(){
         var perfil=document.createElement('IMG')
         var teste=document.createElement('P')
         var icone=document.createElement('P')
-        
         var icone_img=document.createElement('IMG')
 
 
@@ -184,6 +187,6 @@ function criarGaleria(){
 //executando as funcoes
 criarHeader()
 criarDestaques()
-criarEstatisticas()
+
 criarRotas()
 criarGaleria()

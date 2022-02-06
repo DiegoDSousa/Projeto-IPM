@@ -1,8 +1,10 @@
+
 *{
     padding: 0;
     margin: 0;
+    
 }
-@media (min-width: 390px)
+@media (max-width: 390px)
 {
     .header{
         display: flex;
@@ -21,6 +23,69 @@
         gap: 15%;
         
     }
+    .numero{
+        width: 15%;
+        
+        height: 14px;
+        float: left;
+    }
+    .classificacao{
+        position: relative;
+        text-align: center;
+        color: #A9B722;
+        font-weight: bold;
+    }
+    .pontos{
+        margin-top: 12px;
+        margin-left: 20px;
+        color: #A9B722;
+        font-weight: bold;
+        font-size: 22px;
+    }
+    
+    .percentagem{
+        background-color: #A9B722;
+        border-radius: 4px;
+        height: 14px;
+    }
+    .g1{
+        width: 7%;
+    }
+    .g2{
+        width: 49%;
+    }
+    .g3{
+        width: 30%;
+    }
+    .g4{
+        width: 60%;
+    }
+    .g5{
+        width: 29%;
+    }
+    li{
+        display: flex;
+        margin-top: 12px;
+    }
+    .grafico{
+        width: 265px;
+        background-color: #CADA32;
+        border-radius: 4px;
+        height: 14px;
+        margin-left: 4px;
+        float: left;
+    }
+    .estatisticas ol{
+        list-style: none;
+        background-color: #FDFFE2;
+        padding: 5px;
+        padding-right: 40px;
+        height: 212px;
+        width: 318px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
     .nome{
         height:auto;
         width: auto;
@@ -31,8 +96,17 @@
         height: auto;
         width: auto;
         align-items: center;
+    
+    }
+    .teste{
+        width: 400px;
+        height: 30px;
         
     }
+    .rect{
+        fill: blue;
+    }
+
     .header .conteudo{
         display: flex;
         flex-direction: column;
