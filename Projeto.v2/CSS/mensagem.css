@@ -1,22 +1,39 @@
-@media (max-width: 1080px)
-{
-    .formatacao{
-        margin-top: 5px;
-        width: 100%;
-    }
-    .scrol{
-        margin-top: 105px;
-    }
-    .user{
-        display: flex;
-    }
-    .mensagem{
-        font-size: 15px;
-    }
-    .nome{
-        font-weight: 700;
-    }
+@font-face { font-family: BakbakOne; src: url('../Fonts/Anime\ Inept.otf'); } 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.teste{
-    border-radius: 150%;
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+
 }
+.setings{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 50px;
+    background-color: blue;
+}
+.setings .pesquisar{
+   align-self: flex-start;
+}   
+.setings .perfil{
+  align-self: center;
+  justify-self: center;
+}
+.setings .perfil img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    
+
+}       
