@@ -1,33 +1,38 @@
 import nomes from './informacao.class.js'
 var i = 1;
+var conteudo_div=document.getElementById('conteudo')
+
 while (i <= 7) {
-var mostrar=document.getElementById('conteudo')
-var conteudo=document.createElement('DIV')
-var link=document.createElement('A')
-var user=document.createElement('DIV')
-var foto=document.createElement('IMG')
-var paragrafo_nome=document.createElement('P')
-var paragrafo_sms=document.createElement('P')
-var paragrafo=document.createElement('P')
-var sms="Agora podem trocar mensagens"
+    /*criado*/
+    var conteudo=document.createElement('DIV')
+    var link=document.createElement('A')
+    var user=document.createElement('DIV')
+    var user_icon=document.createElement('DIV')
+    var user_description=document.createElement('DIV')
+    var foto=document.createElement('IMG')
+    var paragrafo_nome=document.createElement('P')
+    var paragrafo_sms=document.createElement('P')
+    var paragrafo=document.createElement('P')
+    var sms="Agora podem trocar mensagens"
 
-foto.classList.add("perfil")
-mostrar.classList.add("scrol")
-conteudo.classList.add("conteudo","formatacao")
-user.classList.add("user")
-foto.classList.add("teste")
-paragrafo_sms.classList.add("mensagem")
-paragrafo_nome.classList.add("nome")
+    /* class*/
+    foto.classList.add("perfil_icon")
+    conteudo_div.classList.add("scrol")
+    conteudo.classList.add("post_conteudo")
+    user.classList.add("user_box")
+    paragrafo_sms.classList.add("mensagem")
+    paragrafo_nome.classList.add("nome")
+    
+    /*ligaçãos*/
+    user_icon.append(foto)
+    paragrafo_nome.append(nomes[i])
+    paragrafo_sms.append(sms)
+    user_description.append(paragrafo_nome,paragrafo_sms)
+    user.append(user_icon,user_description)
+    link.append(user)
+    conteudo.append(link)
+    conteudo_div.append(conteudo)
 
-link.append(user)
-conteudo.append(link)
-paragrafo_nome.append(nomes[i])
-paragrafo_sms.append(sms)
-paragrafo.append(paragrafo_nome,paragrafo_sms)
-user.append(foto,paragrafo)
-mostrar.append(conteudo)
-
-foto.src="../Imagens/Imagensperfilpequenas/perfil"+ i +".png"
-link.src="www.youtube.com"
-i = i + 1;
+    foto.src="../Imagens/Imagensperfilpequenas/perfil"+ i +".png"
+    i = i + 1;
 }
