@@ -92,8 +92,6 @@ function criarRotas(){
     var rotas=document.getElementById('rotas')
     var titulo=document.createElement('H2')
     var container=document.createElement('DIV')
-    
-    
 
     //adicionando os elementos
     rotas.append(titulo)
@@ -118,7 +116,6 @@ function criarRotas(){
 
     //atribuindo valores
     titulo.append("Rotas")
-    
     
 }
 function aleatorio(){
@@ -186,7 +183,7 @@ function criarGaleria(){
 
 //executando as funcoes
 criarHeader()
-criarDestaques()
+
 
 criarRotas()
 criarGaleria()

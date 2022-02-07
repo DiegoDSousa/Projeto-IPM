@@ -1,0 +1,18 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: floralwhite;
+}
+h2{
+    margin-top: 50px;
+    margin-left: 510px;
+    font-size: 60px;
+
+}
+.slider{
+    overflow: hidden;
+    height: 800px;
+    width: 1200px;
+    margin-left: 360px;
+    margin-top: 20px;
+}
