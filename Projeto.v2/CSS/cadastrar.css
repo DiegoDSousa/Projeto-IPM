@@ -68,7 +68,16 @@ body{
     letter-spacing: 1px;
     text-align: center;
 }
-
+.data_login{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.data_passaword{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
 .form_box .redite_data{
     display: flex;
     flex-direction: column;
