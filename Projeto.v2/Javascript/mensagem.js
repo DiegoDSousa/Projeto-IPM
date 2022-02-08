@@ -2,8 +2,8 @@ import nomes from './informacao.class.js'
 
 var conteudo_div=document.getElementById('conteudo')
 
-
-for (let i = 1; i <=7; i++) {
+ var num_pefis=nomes.length
+for (let i = 1; i <=num_pefis; i++) {
     /*criado*/
     var conteudo=document.createElement('DIV')
     var link=document.createElement('A')
@@ -18,6 +18,7 @@ for (let i = 1; i <=7; i++) {
 
     /* class*/
     foto.classList.add("perfil_icon")
+    foto.classList.add("status_oline")
     conteudo_div.classList.add("scrol")
     conteudo.classList.add("post_conteudo")
     user.classList.add("user_box")

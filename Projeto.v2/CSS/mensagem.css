@@ -123,6 +123,7 @@
     align-items: center;
     width: 100vw;
     height: 80px;
+    cursor: pointer;
 }
 
 .post_conteudo a{
@@ -193,6 +194,7 @@
 .perfil .logo{
     margin-right:5px;
 }
+
 .perfil .logo img{
     max-width: 250px;
     width: 100%;
