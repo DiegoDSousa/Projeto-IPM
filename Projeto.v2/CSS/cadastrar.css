@@ -45,7 +45,7 @@ body{
 
 }
 
-.form_box{
+.main_box{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -59,8 +59,12 @@ body{
     box-shadow: 0px 10px 20px #c6e48d63;
     padding: 40px;
 }
-
-.form_box span{
+.form_box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.main_box span{
     font-size: 20px;
     font-weight: 1000;
     color:#A9B722;
@@ -70,15 +74,16 @@ body{
 }
 .data_login{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
+    gap: 20px;
 }
 .data_passaword{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
-.form_box .redite_data{
+.redite_data{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -86,6 +91,7 @@ body{
     margin-bottom: 10px;
 }
 .redite_data label{
+    margin-left: 5px;
     font-weight: 800;
     color:#A9B722;
     margin-bottom: 5px;
@@ -104,7 +110,6 @@ body{
     font-weight: 700;
 
     border-radius: 4px;
-    
     color:#A9B722;
     background-color:#CADA32 ;
     box-shadow: 0px 10px 20px #7a832d8f;
@@ -115,16 +120,15 @@ body{
     color:#a8b7228a;
 }
 
-.redite_data .sumit_button{
+.sumit_button{
+    align-self: center;
+
+    margin-top: 15px;
     display: flex;
     justify-content:center;
     align-items:center;
-    align-self:center;
 
-    margin-bottom: 5px;
-    margin-top: 50px;
-
-    width: 150px;
+    width: 300px;
     height: 75px;
     border-style: solid;
     border-radius: 20px;
@@ -135,7 +139,7 @@ body{
     transform: 1s;
 }
 
-.redite_data .sumit_button:hover{
+.sumit_button:hover{
     background-color:#CADA32;
     box-shadow: 0px 10px 20px #7a832d8f;
 }
