@@ -1,8 +1,9 @@
 import nomes from './informacao.class.js'
-var i = 1;
+
 var conteudo_div=document.getElementById('conteudo')
 
-while (i <= 7) {
+
+for (let i = 1; i <=7; i++) {
     /*criado*/
     var conteudo=document.createElement('DIV')
     var link=document.createElement('A')
@@ -20,7 +21,9 @@ while (i <= 7) {
     conteudo_div.classList.add("scrol")
     conteudo.classList.add("post_conteudo")
     user.classList.add("user_box")
-    paragrafo_sms.classList.add("mensagem")
+    user_description.classList.add("user_description")
+    user_icon.classList.add("user_icon")
+    paragrafo_sms.classList.add("menssagem")
     paragrafo_nome.classList.add("nome")
     
     /*ligaçãos*/
@@ -34,5 +37,6 @@ while (i <= 7) {
     conteudo_div.append(conteudo)
 
     foto.src="../Imagens/Imagensperfilpequenas/perfil"+ i +".png"
-    i = i + 1;
+   
 }
+
