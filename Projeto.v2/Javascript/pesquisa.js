@@ -2,32 +2,39 @@ var nomes=["João Antonio","Raquel Maria","Rafael Antonio","Mario Andrade","Rafa
 "Rita Perreira","Guilherme Reis","Helena Gomes"]
 
 var nomePesquisado=document.getElementById("pesquisar").value
+function redirecionar(){
+        window.location="../HTML/perfil.html"
+}
 
 
 function pesquisar(){
+    document.getElementById("lista").innerHTML=''
     var nomePesquisado=document.getElementById("pesquisar").value
     nomePesquisado=nomePesquisado.toLocaleLowerCase()
-    console.log(nomePesquisado)
     var auxiliar=[]
     var i
     for(i in nomes){
         auxiliar[i]=nomes[i].toLocaleLowerCase()
     }
     i=0
+    var n
+    
     for(i in nomes){
         if(nomePesquisado==auxiliar[i]){
-            break
+            var lista=document.createElement('LI')
+            var foto=document.createElement('IMG')
+            lista.setAttribute("onclick","redirecionar()")
+            document.getElementById("lista").append(lista)
+            lista.append(foto)
+            lista.append(nomes[i])
+            localStorage.nome=nomes[i]
+            foto.src="../Imagens/ImagensPerfilPequenas/perfil"+i+".png"
+            return
         }
     }
-    if(i>=0){
-        var lista=document.createElement('LI')
-        document.getElementById("lista").append(lista)
-        lista.append(nomes[i])
-        localStorage.nome=nomes[i]
-        window.location="../HTML/perfil.html"
-    }else{
+    
         return usuarioNaoEncontrado()
-    }
+    
     
         
 
