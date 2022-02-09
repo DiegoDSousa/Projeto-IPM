@@ -3,7 +3,8 @@ var nomes=["João Antonio","Raquel Maria","Rafael Antonio","Mario Andrade","Rafa
 
 var nomePesquisado=document.getElementById("pesquisar").value
 function redirecionar(){
-        window.location="../HTML/perfil.html"
+    document.getElementById("pesquisar").value=""
+    window.location="../HTML/perfil.html"
 }
 
 
