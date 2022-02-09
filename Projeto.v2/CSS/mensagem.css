@@ -1,4 +1,7 @@
 @font-face { font-family: BakbakOne; src: url('../Fonts/Anime\ Inept.otf'); } 
+:root{
+    --user_box_color:white;
+}
 
 *{
     margin: 0;
@@ -20,6 +23,7 @@
     position:fixed;
     top:0;
     background-color: white;
+    z-index: 99;
 }
 .setings{
     display: flex;
@@ -102,6 +106,7 @@
     background-color: #FDFFE2;
     width: 100vw;
     height: 65px;
+    
 }
 .heard_box h1{
     font-weight: 800;
@@ -126,20 +131,29 @@
     cursor: pointer;
 }
 
-.post_conteudo a{
-    width: 100%;
-    height: 100%;
-}
-.post_conteudo a:hover{
-    background-color: rgb(241, 241, 241);
-}
 .user_box{
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    background-color: var(--user_box_color);
+    width: 100%;
+}
+.user_box:hover{
+    --user_box_color:rgb(241, 241, 241);
 }
 .user_icon{
-    margin:10px 
+    margin:10px;
+    position:relative;
+}
+.user_status{
+    position: absolute;
+    background-color: #24ff41;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid var(--user_box_color);
+    right: 4px;
+    bottom: 6px;
 }
 .user_icon img{
     width: 80px;
