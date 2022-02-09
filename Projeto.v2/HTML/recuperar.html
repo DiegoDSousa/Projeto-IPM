@@ -14,13 +14,14 @@
         <span>Insira o email que deseja recuperar a palavra passe</span>
         <div class="recuperar_data">
             <label for="E-mail">E-mail</label>
-            <input type="email" placeholder="E-mail">  
+            <input type="email" id="email" placeholder="E-mail" autocomplete="of">  
        </div>
       <div class="box_rediretc">
             <div class="rediretc_button" class="cancelar"><a href="index.html">Cancelar</a></div>
-            <div class="rediretc_button" id="enviar"><a href="feed.html">Enviar</a></div>
+            <div class="rediretc_button" id="enviar" onclick="verificar()"><a href="#">Enviar</a></div>
       </div>
     </div>
 </div>
+<script src="../Javascript/recuperar.js"></script>
 </body>
 </html>
