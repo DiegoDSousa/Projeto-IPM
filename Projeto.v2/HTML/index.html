@@ -15,17 +15,17 @@
             <form action="feed.html">
                 <div class="login_data">
                     <label for="E-mail">E-mail</label>
-                    <input type="email" placeholder="E-mail">  
+                    <input id="email" type="email" placeholder="E-mail" autocomplete="of">  
                 </div>
                 <div class="login_data">
                    <label for="Password">Password</label>
-                   <input type="Password" placeholder="Password">  
+                   <input id="password" type="Password" placeholder="Password">  
                </div>
         
         </div>
        
-        </form action="feed.html">
-        <div class="login_button"><a href="feed.html">Login</a></div>
+        </form>
+        <div class="login_button"><a href="#" onclick="verificar()">Login</a></div>
         
         <div class="login_rediretc">
             <a href="recuperar.html">Recuperar Password</a>
@@ -34,6 +34,6 @@
     </div>  
    </div>
    
-
+   <script src="../Javascript/login.js"></script>
 </body>
 </html>
