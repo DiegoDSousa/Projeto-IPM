@@ -1,22 +1,220 @@
-@media (max-width: 1080px)
-{
-    .formatacao{
-        margin-top: 5px;
-        width: 100%;
-    }
-    .scrol{
-        margin-top: 105px;
-    }
-    .user{
-        display: flex;
-    }
-    .mensagem{
-        font-size: 15px;
-    }
-    .nome{
-        font-weight: 700;
-    }
+@font-face { font-family: BakbakOne; src: url('../Fonts/Anime\ Inept.otf'); } 
+:root{
+    --user_box_color:white;
 }
-.teste{
-    border-radius: 150%;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+}
+.heard{
+    position:fixed;
+    top:0;
+    background-color: white;
+    z-index: 99;
+}
+.setings{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 50px;
+    position:relative;
+    top:0;
+    
+}
+ .pesquisar{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    
+    width: 50vw;
+    padding:5px;
+}
+.pesquisar img{
+    width: 30px;
+    height: 30px; 
+    
+}
+.box_pesquisar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    background-color: rgb(243, 243, 243);
+    border-radius: 500px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.box_pesquisar input{
+    width: 100%;
+    height: 100%;
+    padding:0px 10px;
+    background-color: transparent;
+    font-size: 15px;
+    padding: px 0px;
+    font-weight: 700;
+    outline: none;
+    border: none;
+}
+
+.setings .perfil{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;  
+    width: 50vw;
+    padding:10px;
+}
+
+.perfil .icon_perfil img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;  
+}
+.perfil .icon_perfil{
+    margin-right:10px;
+}
+.perfil .logo{
+    margin-right:10px;
+}
+.perfil .logo img{
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+}
+
+.heard_box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;  
+    background-color: #FDFFE2;
+    width: 100vw;
+    height: 65px;
+    
+}
+.heard_box h1{
+    font-weight: 800;
+    color:#D7E365
+}
+#conteudo{
+    align-self: flex-start;
+
+    margin-top: 120px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0px;
+}
+
+.post_conteudo{
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 80px;
+    cursor: pointer;
+}
+
+.user_box{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--user_box_color);
+    width: 100%;
+}
+.user_box:hover{
+    --user_box_color:rgb(241, 241, 241);
+}
+.user_icon{
+    margin:10px;
+    position:relative;
+}
+.user_status{
+    position: absolute;
+    background-color: #24ff41;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid var(--user_box_color);
+    right: 4px;
+    bottom: 6px;
+}
+.user_icon img{
+    width: 80px;
+    width: 80px;
+    border-radius: 50%;
+    
+}
+.user_description{
+    align-self: flex-start;
+    margin-top: 12px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 150px;
+   
+}
+.user_description .nome{
+    font-weight: 1000;
+    font-size: 1.3em;
+
+    
+}
+
+.user_description .menssagem{
+    font-weight: 500;
+    font-size: 10px;
+    color: #c0c0c0;
+}
+
+@media only screen and (max-width: 500px) {
+.box_pesquisar{
+    display: none;
+}
+.pesquisar img{
+    width: 40px;
+    height: 40px; 
+    margin-left: 10px;
+}
+.heard_box{
+    justify-content: flex-start;
+    margin-left: 10px;
+}
+
+.perfil .icon_perfil img{
+    width: 35px;
+    height: 35px;
+}
+.perfil .icon_perfil{
+    margin-right:0px;
+}
+.perfil .logo{
+    margin-right:5px;
+}
+
+.perfil .logo img{
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+}
+
+
+
 }
