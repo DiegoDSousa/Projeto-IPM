@@ -8,7 +8,6 @@ function criar(){
     var header=document.createElement('DIV')
     var perfil=document.createElement('IMG')
     var nome=document.createElement('P')
-    var teste=document.createElement('P')
     var icone=document.createElement('P')
     var icone_img=document.createElement('IMG')
     var footer=document.createElement('DIV')
@@ -29,9 +28,8 @@ function criar(){
     nome.classList.add("nome")
 
     feed.append(scrol)
-    nome.append(teste)
+    nome.append(nomes[i])
     scrol.append(publicacao)
-    teste.append(nomes[i])
     icone.append(icone_img)
     header.append(perfil,nome,icone)
     div_foto.append(foto_publicada)
