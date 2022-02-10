@@ -1,4 +1,8 @@
-var box_messagens=document.getElementById("box_messagens")
+
+enviar.addEventListener('click',enviar_messagem)
+
+
+
 function criar_perfil(){
 
 var box_perfil=document.getElementById("box_perfil")
@@ -98,6 +102,48 @@ function criar_messagens(){
     
 }
 
+function enviar_messagem(){
+
+    var box_messagens=document.getElementById("box_messagens")
+    var enviar=document.getElementById("enviar")
+    var text=document.getElementById("messagem")
+
+    messagem_texto=text.value
+    text.value=""
+    if (messagem_texto==""){
+        return
+    }
+
+    var messagem=document.createElement('DIV')
+    var user_icon=document.createElement('DIV')
+    var foto=document.createElement('IMG')
+    var content=document.createElement('DIV')
+    var text=document.createElement('SPAM')
+
+    messagem.classList.add("box_msg_E")
+    foto.src="../Imagens/perfil/perfil1.jpg"
+    text.innerHTML=messagem_texto
+
+    user_icon.append(foto)
+    content.append(text)
+    messagem.append(content,user_icon)
+    box_messagens.append(messagem)
+        
+
+    user_icon.classList.add("user_icon_m")
+    content.classList.add("box_content")
+
+
+    
+       
+    content.append(text)
+    messagem.append(user_icon,content)
+    box_messagens.append(messagem)
+
+
+
+
+}
 
 
 criar_perfil()
