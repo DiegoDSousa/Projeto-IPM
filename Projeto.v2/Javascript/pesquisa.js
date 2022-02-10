@@ -22,13 +22,16 @@ function pesquisar(){
     for(i in nomes){
         if(nomePesquisado==auxiliar[i]){
             var lista=document.createElement('LI')
+            var nome=document.createElement('P')
             var foto=document.createElement('IMG')
             lista.setAttribute("onclick","redirecionar()")
             document.getElementById("lista").append(lista)
             lista.append(foto)
-            lista.append(nomes[i])
+            nome.append(nomes[i])
+            lista.append(nome)
             localStorage.nome=nomes[i]
             foto.src="../Imagens/ImagensPerfilPequenas/perfil"+i+".png"
+            foto.alt="imagem de perfil"
             return
         }
     }
