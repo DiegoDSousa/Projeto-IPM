@@ -43,6 +43,3 @@ for (let i = 1; i <=num_pefis; i++) {
 
 
 
-function clicado(){
- alert("clicado")
-}
