@@ -1,5 +1,5 @@
 var i = 0;
-import nomes from './informacao.class.js';
+import usuarios from './informacao.class.js';
 function criar(){  
     var feed=document.getElementById('feed')
     var scrol=document.getElementById('conteudo')
@@ -28,7 +28,7 @@ function criar(){
     nome.classList.add("nome")
 
     feed.append(scrol)
-    nome.append(nomes[i])
+    nome.append(usuarios[i].nome)
     scrol.append(publicacao)
     icone.append(icone_img)
     header.append(perfil,nome,icone)
@@ -56,7 +56,7 @@ function criar(){
 
 }  
 
-while (i <= 7) {
+while (i <= length(Usuarios)) {
     criar()
     i = i + 1;
 }  

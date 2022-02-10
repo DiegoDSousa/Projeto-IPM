@@ -30,4 +30,4 @@ var usuarios=[
 
 ]
 
-export default nomes 
+export default usuarios
