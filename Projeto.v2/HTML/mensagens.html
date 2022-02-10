@@ -1,31 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mensagens</title>
-    <link rel="stylesheet" href="../CSS/feed.css">
+    
     <link rel="stylesheet" href="../CSS/mensagem.css">
 </head>
 <body>
-    <div class="content" id="mensagens">
-        <div class="top">
-            <div class="setings">
-                <p>
-                <a href="feed.html"><img src="../Imagens/Icones/sair.svg" alt="defenicoes"></a>
-                <a href="#"><img src="../Imagens/Icones/pesquisar.svg" alt="pesquisar"></a>
-                <a href="#"><img src="../Imagens/Imagensperfilpequenas/pequeno.png" alt="perfil"></a>
-                </p>
-                
+    <div class="main" id="mensagens">
+        <div class="heard">
+        <div class="setings">
+            <div class="pesquisar">
+             
+             <div class="box_pesquisar">
+                <input type="text" placeholder="">
+             </div>
+             <a href="pesquisar.html" ><img src="../Imagens/Icones/pesquisar.svg" alt="pesquisar" ></a>
             </div>
-            <div class="icones">
-                <p>
-                    <a href="mensagens.html"><img src="../Imagens/Icones/messagens.svg" alt=""></a>
-                    <p>Mensagem</p>
-                </p>
-            </div>
+            <div class="perfil">
+             <a href="feed.html" class="logo"><img src="../Imagens/Icones/logo2.png" alt="logo"></a>
+             <a href="perfil.html" class="icon_perfil"><img src="../Imagens/perfil/perfil0.jpg" alt="perfil"></a>
+             </div>
         </div>
+         <div class="heard_box">
+             <a href="mensagens.html"><img src="../Imagens/Icones/messagens.svg" alt=""></a>
+             <h1>Menssagens</h1>
+        </div>
+    </div>
+
         <div id="conteudo"></div>
     </div>
     <script type='module' src="../Javascript/mensagem.js"></script>
