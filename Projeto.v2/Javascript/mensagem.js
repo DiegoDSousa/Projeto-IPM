@@ -43,3 +43,6 @@ for (let i = 1; i <=num_pefis; i++) {
 
 
 
+function clicado(){
+    window.location="../HTML/mensagens_enviar.html"
+}
