@@ -49,6 +49,12 @@ function redirecionar(){
 
 function pesquisar(){
     var pesquisados_box=document.getElementById("lista")
+
+    not_found=document.getElementById("not_found")
+    not_found.classList.add("not_found_off")
+    not_found.classList.remove("not_found")
+
+
     document.getElementById("lista").innerHTML=''
     var nomePesquisado=document.getElementById("pesquisar").value
     nomePesquisado=nomePesquisado.toLocaleLowerCase()
@@ -62,48 +68,47 @@ function pesquisar(){
     
     for(i in usuarios){
         if(nomePesquisado==auxiliar[i]){
-        
-    var user=document.createElement('DIV')
-    var user_icon=document.createElement('DIV')
-    var user_description=document.createElement('DIV')
-    var foto=document.createElement('IMG')
-    var user_status=document.createElement('DIV')
-    var nome=document.createElement('P')
-    var description=document.createElement('P')
+        var user=document.createElement('DIV')
+        var user_icon=document.createElement('DIV')
+        var user_description=document.createElement('DIV')
+        var foto=document.createElement('IMG')
+        var user_status=document.createElement('DIV')
+        var nome=document.createElement('P')
+        var description=document.createElement('P')
     
     
-    foto.classList.add("perfil_icon")
-    user_status.classList.add("user_status")
-    user.classList.add("user_box")
-    user_description.classList.add("user_description")
-    user_icon.classList.add("user_icon")
-    description.classList.add("description")
-    nome.classList.add("nome")
+        foto.classList.add("perfil_icon")
+        user_status.classList.add("user_status")
+        user.classList.add("user_box")
+        user_description.classList.add("user_description")
+        user_icon.classList.add("user_icon")
+        description.classList.add("description")
+        nome.classList.add("nome")
     
     
-    foto.src="../Imagens/usuarios/"+usuarios[i].imagens+"/perfil.jpg"
-    user_status.innerHTML=""
-    nome.innerText=usuarios[i].nome
-    description.innerHTML="Sem nada a dizer"
+        foto.src="../Imagens/usuarios/"+usuarios[i].imagens+"/perfil.jpg"
+        user_status.innerHTML=""
+        nome.innerText=usuarios[i].nome
+        description.innerHTML="Sem nada a dizer"
     
     
-    user_icon.append(foto,user_status)
-    user_description.append(nome,description)
-    user.append(user_icon,user_description)
-    pesquisados_box.append(user)
-        
-    }else{
-         usuarioNaoEncontrado()
+        user_icon.append(foto,user_status)
+        user_description.append(nome,description)
+        user.append(user_icon,user_description)
+        pesquisados_box.append(user)
+        return
     }
+      
     
-        
-}
-}
-function usuarioNaoEncontrado(){
-    var lista=document.createElement('P')
-    lista.classList.add("not_find")
-    document.getElementById("lista").append(lista)
-    lista.append("Usuario não encontrado")
-    
+    }
+
+    not_found=document.getElementById("not_found")
+    not_found.classList.remove("not_found_off")
+    not_found.classList.add("not_found")    
 }
 
+ function not_found_box(){
+    not_found=document.getElementById("not_found")
+    not_found.classList.add("not_found_off")
+    not_found.classList.remove("not_found")
+ }
