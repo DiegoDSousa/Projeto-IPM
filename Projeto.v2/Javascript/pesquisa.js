@@ -98,6 +98,7 @@ function pesquisar(){
     
         
 }
+}
 function usuarioNaoEncontrado(){
     var lista=document.createElement('P')
     lista.classList.add("not_find")
@@ -105,6 +106,4 @@ function usuarioNaoEncontrado(){
     lista.append("Usuario não encontrado")
     
 }
-
-
 
