@@ -2,19 +2,20 @@
 import usuarios from './informacao.class.js';
 
 
-console.log(localStorage.nome)
-var nome=localStorage.getItem("nome")
-console.log(nome)
 
-var i=0
-while(i<=7){
-    if(nome==usuarios[i].nome){
-        break
+function encontra_perfil(){
+    var nome=localStorage.getItem("nome")
+    for (let i = 0; i < usuarios.length; i++) {
+        if (usuarios[i].nome===nome){
+            return usuarios[i]
+        }
+        
     }
-    i=i+1
 }
+
 //criando as funcoes
-function criarHeader(){
+function criarHeader(usuario){
+
     //criando os elementos
     var topo=document.getElementById('topo')
     var nomeUsuario=document.createElement('P')
@@ -26,25 +27,28 @@ function criarHeader(){
     //adicionando classes aos elementos
     topo.classList.add("header")
     descrisao.classList.add("descricao")
-    texto.classList.add("conteudo")
+    texto.classList.add("descricao_box")
     nomeUsuario.classList.add("nome")
     perfil.classList.add("perfil")
+    //atribuindo valores
+    perfil.src="../Imagens/usuarios/"+usuario.imagens+"/perfil.jpg"
+    perfil.alt="foto perfil do usuario"
+    descrisao.innerHTML=usuario.descricao
+    nomeUsuario.innerText=usuario.nome
     //adicionando os elementos
     texto.append(nomeUsuario,descrisao)
     foto.append(perfil)
     topo.append(texto)
 
-    //atribuindo valores
-    perfil.src="../Imagens/usuarios/"+usuarios[i].imagens+"/perfil.jpg"
-    perfil.alt="foto perfil do usuario"
-    descrisao.innerHTML=usuarios[i].descricao
-    nomeUsuario.innerText=nome
+
+    
 }
 
 
-function criarDestaques(){
+function criarDestaques(usuario){
     //criando os elementos
     var destaques=document.getElementById('stories-wraper')
+    
     var container=document.createElement('DIV')
     var butao=document.createElement('BUTTON')
     var img=document.createElement('IMG')
@@ -67,13 +71,8 @@ function criarDestaques(){
     
     img.src="../Imagens/Destaques/fotosdestaques/teste.png"
 
-    //adicionando classes aos elementos
+   
 
-    
-
-    //atribuindo valores
-    
-    
 }
 
 
@@ -196,13 +195,8 @@ function criarGaleria(){
 
 
 //executando as funcoes
-criarHeader()
 
-
-criarRotas()
-criarGaleria()
-var a
-while(a<7){
-    criarDestaques()
-    a=a+1
-}
+ var perfil_usario=encontra_perfil()
+criarHeader(perfil_usario)
+criarRotas(perfil_usario)
+criarGaleria(perfil_usario)
