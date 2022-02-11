@@ -1,4 +1,8 @@
+import usuarios from './informacao.class.js'
+
 var box_messagens=document.getElementById("box_messagens")
+var nomeusuario=localStorage.getItem("nome")
+
 function criar_perfil(){
 
 var box_perfil=document.getElementById("box_perfil")
@@ -20,15 +24,28 @@ user_icon.classList.add("user_icon")
 description.classList.add("description")
 nome.classList.add("nome")
 
-foto.src="../Imagens/perfil/perfil0.jpg"
+
+foto.src="../Imagens/usuarios/"+usuarios[encontrar()].imagens+"/perfil.jpg"
 user_status.innerHTML=""
-nome.innerText="Nuno Lima"
+nome.innerText=nomeusuario
 description.innerHTML="Sem nada a dizer"
+
 
 user_icon.append(foto,user_status)
 user_description.append(nome,description)
 user.append(user_icon,user_description)
 box_perfil.append(user)
+}
+
+function encontrar(){
+    var count=0
+    while (count<usuarios.length){
+        if(usuarios[count].nome==nomeusuario){
+            break
+        }
+        count=count+1
+    }
+    return count
 }
 
 function criar_messagens(){
@@ -66,7 +83,7 @@ function criar_messagens(){
         
         if (conversa[i][0]=="R"){
             messagem.classList.add("box_msg_R")
-            foto.src="../Imagens/perfil/perfil0.jpg"
+            foto.src="../Imagens/usuarios/"+usuarios[encontrar()].imagens+"/perfil.jpg"
             text.innerHTML=conversa[i][1]
 
             user_icon.append(foto)
@@ -75,7 +92,7 @@ function criar_messagens(){
             box_messagens.append(messagem)
         }else{
             messagem.classList.add("box_msg_E")
-            foto.src="../Imagens/perfil/perfil1.jpg"
+            foto.src="../Imagens/usuarios/"+usuarios[encontrar()].imagens+"/perfil.jpg"
             text.innerHTML=conversa[i][1]
 
             user_icon.append(foto)
@@ -97,33 +114,8 @@ function criar_messagens(){
     }
     
 }
-function clicado(){
-    window.location="../HTML/mensagens_enviar.html"
-   }
-   function enviar(){
-       var mensagens=document.getElementById('mensagem').value
-       var container=document.getElementById('box_messagens')
-       var box_msg_e=document.createElement('div')
-       var user_icon_m=document.createElement('div')
-       var box_content=document.createElement('div')
-       var foto=document.createElement('div')
-       var spam=document.createElement('spam')
 
 
-       box_msg_e.classList.add('box_msg_E')
-       user_icon_m.classList.add('user_icon_m')
-       box_content.classList.add('box_content')
-
-   
-       spam.append(mensagens)
-       console.log(mensagens)
-       box_content.append(spam)
-       user_icon_m.append(foto)
-       box_msg_e.append(user_icon_m,box_content)
-       container.appendChild(box_msg_e)
-
-       foto.src="../Imagens/perfil/perfil1.jpg"
-   }
 
 
 

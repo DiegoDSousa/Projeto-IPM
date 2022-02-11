@@ -1,6 +1,6 @@
 
-import nomes from './informacao.class.js';
-import info from './descricao.class.js';
+import usuarios from './informacao.class.js';
+
 
 console.log(localStorage.nome)
 var nome=localStorage.getItem("nome")
@@ -8,7 +8,7 @@ console.log(nome)
 
 var i=0
 while(i<=7){
-    if(nome==nomes[i]){
+    if(nome==usuarios[i].nome){
         break
     }
     i=i+1
@@ -28,37 +28,51 @@ function criarHeader(){
     descrisao.classList.add("descricao")
     texto.classList.add("conteudo")
     nomeUsuario.classList.add("nome")
-
+    perfil.classList.add("perfil")
     //adicionando os elementos
     texto.append(nomeUsuario,descrisao)
     foto.append(perfil)
     topo.append(texto)
 
     //atribuindo valores
-    perfil.src="../Imagens/Imagensperfilpequenas/perfil"+ i +".png"
+    perfil.src="../Imagens/usuarios/"+usuarios[i].imagens+"/perfil.jpg"
     perfil.alt="foto perfil do usuario"
-    descrisao.innerHTML=info[i]
+    descrisao.innerHTML=usuarios[i].descricao
     nomeUsuario.innerText=nome
 }
 
 
 function criarDestaques(){
     //criando os elementos
-    var destaques=document.getElementById('destaques')
-    var titulo=document.createElement('H2')
+    var destaques=document.getElementById('stories-wraper')
     var container=document.createElement('DIV')
+    var butao=document.createElement('BUTTON')
+    var img=document.createElement('IMG')
+    var perfil=document.createElement('DIV')
+    var title=document.createElement('DIV')
+
+
+
+    container.classList.add("stories-container")
+    butao.classList.add("story")
+    perfil.classList.add("profile")
+    title.classList.add("title")
 
     //adicionando os elementos
-    destaques.append(titulo)
+    perfil.append(img)
+    butao.append(perfil,title)
+    container.append(butao)
     destaques.append(container)
+    title.append("teste")
     
+    img.src="../Imagens/Destaques/fotosdestaques/teste.png"
 
     //adicionando classes aos elementos
 
-    titulo.classList.add("titulo")
+    
 
     //atribuindo valores
-    titulo.append("Destaques")
+    
     
 }
 
@@ -144,7 +158,7 @@ function criarGaleria(){
 
     var contfotos=0
     while(contfotos<=6){
-        var verificar=[]
+        
         var foto=document.createElement('IMG')
         var containerfoto=document.createElement('DIV')
         var nome=document.createElement('P')
@@ -161,14 +175,14 @@ function criarGaleria(){
         nome.classList.add("nome")
         header.classList.add("headerfoto")
 
-        teste.append(nomes[i])
+        teste.append (usuarios[i].nome)
         icone.append(icone_img)
         nome.append(teste)
         header.append(perfil,nome,icone)
         containerfoto.append(header,foto)
         container.append(containerfoto)
         
-        perfil.src="../Imagens/Imagensperfilpequenas/perfil"+ i +".png"
+        perfil.src="../Imagens/usuarios/"+usuarios[i].imagens+"/perfil.jpg"
         icone_img.src="../Imagens/Icones/editar.svg"
         perfil.alt="foto_perfil"
 
@@ -187,3 +201,8 @@ criarHeader()
 
 criarRotas()
 criarGaleria()
+var a
+while(a<7){
+    criarDestaques()
+    a=a+1
+}
