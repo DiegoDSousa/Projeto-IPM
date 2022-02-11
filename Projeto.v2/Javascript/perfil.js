@@ -96,7 +96,7 @@ function criarGaleria(){
     titulo.append("Galeria")
 
     var j=0
-    while(j<usuarios[i].numero_fotos){
+    while(j<perfil_usario.numero_fotos){
         //var feed=document.getElementById('feed')
         var scrol=document.getElementById('galeria')
 
@@ -121,7 +121,7 @@ function criarGaleria(){
         nome.classList.add("nome")
 
         //feed.append(scrol)
-        nome.append(usuarios[i].nome)
+        nome.append(perfil_usario.nome)
         scrol.append(publicacao)
 
         header.append(perfil,nome)
@@ -139,8 +139,8 @@ function criarGaleria(){
         gosto.alt="gosto"
         comentar.alt="comentar"
 
-        perfil.src="../Imagens/usuarios/"+usuarios[i].imagens+"/perfil.jpg"
-        foto_publicada.src="../Imagens/usuarios/"+usuarios[i].imagens+"/img"+j +".jpg"
+        perfil.src="../Imagens/usuarios/"+perfil_usario.imagens+"/perfil.jpg"
+        foto_publicada.src="../Imagens/usuarios/"+perfil_usario.imagens+"/img"+j +".jpg"
         
         gosto.src="../Imagens/Icones/Gosto.svg"
         comentar.src="../Imagens/Icones/comentario.svg"
@@ -157,3 +157,5 @@ function criarGaleria(){
 criarHeader(perfil_usario)
 criarRotas(perfil_usario)
 criarGaleria(perfil_usario)
+
+
