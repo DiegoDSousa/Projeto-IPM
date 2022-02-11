@@ -1,97 +1,120 @@
+@font-face { font-family: BakbakOne; src: url('../Fonts/Anime\ Inept.otf'); } 
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: BakbakOne;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-@media (min-width: 390px)
-{
-    *{
-        padding: 0;
-        margin: 0;
-    }
-    .header{
-        width: 380px;
-        display: flex;
-        grid-template-columns: auto auto;
-        
-    }
-    .top .icones{
-        display: flex;
-        width: 100%;
-        height: 55px;
-        background-color: #FDFFE2;
-        justify-content: center;
-        margin-top: 50px;
-        margin-left: auto;
-        margin-right: auto;
    
-    }
-    .top .setings{
-        position:fixed ;
-        background-color: #ffff;
-        width: 100%;
-        height: auto;
-        margin-top: auto;
-        margin-left: auto;
-        margin-right: auto;
-        display: flex;
-        
-    }
-    .top{
-        display: grid;
-    }
-    .top .icones p{
-        display: flex;
-        
-    }
-    .top .icones p a{
-        margin-left: 20px;
-        margin-right: 20px;
-        width: 40px;
-        height: 40px;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;  
+}
+.heard{
+    position:fixed;
+    top:0;
+    background-color: white;
+    z-index: 99;
+}
+.setings{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 50px;
+    position:relative;
+    top:0;
     
-    }
-    .footer{
-        background-color: white;
-    }
-    .conteudo{
-        margin-top: 110px;
-    }
-    .publicacao{
-        background-color: white;
-        position:unset;
-        margin-top: 2px;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 380px;
-        height: 448;
-    }
-    .icones a img{
-        padding: 10px;
-        margin-left: 10px;
-    }
+}
+ .pesquisar{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
     
-    .header{
-        display: flex;
-        max-width: 200px;
-        flex-direction: row;
-        margin-top: 5px;
-    }
-    .header p{
-        margin-left: auto;
-    }
-    .editar{
-        width: 30px;
-        height: 30px;
-        left: 380px;
-        top: 6px;
-    }
-    .foto_publicada{
-        margin-left: 0px;
-        width:100%;
-        height: auto;
-        margin-top:10px ;
-    }
-    .perfil{
-        width: 20%;
-        height: 20%;
-    }
+    width: 50vw;
+    padding:5px;
+    margin-top: 10px;
+}
+.pesquisar img{
+    width: 30px;
+    height: 30px; 
     
+}
+.box_pesquisar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 80%;
+    background-color: rgb(243, 243, 243);
+    border-radius: 500px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.box_pesquisar input{
+    width: 100%;
+    height: 100%;
+    padding:0px 10px;
+    background-color: transparent;
+    font-size: 15px;
+    padding: 0px 0px;
+    font-weight: 700;
+    outline: none;
+    border: none;
+}
+
+.setings .perfil{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;  
+    width: 50vw;
+    padding:10px;
+}
+
+.perfil .icon_perfil img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;  
+}
+.perfil .icon_perfil{
+    margin-right:10px;
+}
+.perfil .logo{
+    margin-right:10px;
+}
+.perfil .logo img{
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+}
+
+
+.paginas{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #FDFFE2;
+    padding: 5px;
+    gap:2%
+}
+.paginas img{
+    width: 40px;
+    height: 40px;
+}
+.paginas img:hover{
+    transform: scale(1.3);
 }
