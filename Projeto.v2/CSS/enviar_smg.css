@@ -59,6 +59,7 @@
     width: 100vw;
     height: auto;
     margin-top: 10px;
+    margin-bottom: 50px ;
 }
 /*----------------------Recebida-------------*/
 .box_msg_R{
@@ -154,7 +155,9 @@
    
     margin-right: 5px;
 }
-
+.input_text img{
+    cursor: pointer;
+}
 .input_text input{
 
     height: 50px;
