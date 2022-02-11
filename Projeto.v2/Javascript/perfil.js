@@ -45,61 +45,6 @@ function criarHeader(usuario){
 }
 
 
-function criarDestaques(usuario){
-    //criando os elementos
-    var destaques=document.getElementById('stories-wraper')
-    
-    var container=document.createElement('DIV')
-    var butao=document.createElement('BUTTON')
-    var img=document.createElement('IMG')
-    var perfil=document.createElement('DIV')
-    var title=document.createElement('DIV')
-
-
-
-    container.classList.add("stories-container")
-    butao.classList.add("story")
-    perfil.classList.add("profile")
-    title.classList.add("title")
-
-    //adicionando os elementos
-    perfil.append(img)
-    butao.append(perfil,title)
-    container.append(butao)
-    destaques.append(container)
-    title.append("teste")
-    
-    img.src="../Imagens/Destaques/fotosdestaques/teste.png"
-
-   
-
-}
-
-
-function criarEstatisticas(){
-    //criando os elementos
-    var destaques=document.getElementById('estatisticas')
-    var titulo=document.createElement('H2')
-    var container=document.createElement('DIV')
-    var paragrafo=document.createElement('P')
-    var container2=document.createElement('DIV')
-    var lista=document.createElement('OL')
-    var elemento=document.createElement('LI')
-    //adicionando os elementos
-    destaques.append(titulo,container)
-    container.append(paragrafo,container2)
-
-    //adicionando classes aos elementos
-
-    titulo.classList.add("titulo")
-    container2.classList.add("skils__bar")
-    container2.classList.add("skills__bar--70")
-    container.classList.add("skils")
-    //atribuindo valores
-    titulo.append("Estatisticas")
-    
-}
-
 function criarRotas(){
     //criando os elementos
     var rotas=document.getElementById('rotas')
@@ -131,11 +76,6 @@ function criarRotas(){
     titulo.append("Rotas")
     
 }
-function aleatorio(){
-        const random= (min,max) => Math.floor(Math.random()*(max-min)+min)
-        
-        return(random(0,12))
-}
 
 function criarGaleria(){
     //criando os elementos
@@ -155,41 +95,58 @@ function criarGaleria(){
     //atribuindo valores
     titulo.append("Galeria")
 
-    var contfotos=0
-    while(contfotos<=6){
-        
-        var foto=document.createElement('IMG')
-        var containerfoto=document.createElement('DIV')
-        var nome=document.createElement('P')
+    var j=0
+    while(j<usuarios[i].numero_fotos){
+        //var feed=document.getElementById('feed')
+        var scrol=document.getElementById('galeria')
+
+        var publicacao=document.createElement('DIV')
         var header=document.createElement('DIV')
         var perfil=document.createElement('IMG')
-        var teste=document.createElement('P')
-        var icone=document.createElement('P')
-        var icone_img=document.createElement('IMG')
+        var nome=document.createElement('P')
+        var footer=document.createElement('DIV')
+        var foto_publicada=document.createElement('IMG')
+        var div_foto=document.createElement('DIV')
+        var comentar=document.createElement('IMG')
+        var partilhar=document.createElement('IMG')
+        var gosto=document.createElement('IMG')
+        var divisao=document.createElement('HR')
 
-
-        foto.classList.add("foto_publicada")
-        containerfoto.classList.add("foto")
+        scrol.classList.add("conteudo")
+        header.classList.add("header")
+        publicacao.classList.add("publicacao")
+        foto_publicada.classList.add("foto_publicada")
+        div_foto.classList.add("foto")
         perfil.classList.add("perfil")
         nome.classList.add("nome")
-        header.classList.add("headerfoto")
 
-        teste.append (usuarios[i].nome)
-        icone.append(icone_img)
-        nome.append(teste)
-        header.append(perfil,nome,icone)
-        containerfoto.append(header,foto)
-        container.append(containerfoto)
-        
-        perfil.src="../Imagens/usuarios/"+usuarios[i].imagens+"/perfil.jpg"
-        icone_img.src="../Imagens/Icones/editar.svg"
+        //feed.append(scrol)
+        nome.append(usuarios[i].nome)
+        scrol.append(publicacao)
+
+        header.append(perfil,nome)
+        div_foto.append(foto_publicada)
+        footer.append(gosto,comentar,partilhar)
+        publicacao.append(header)
+        publicacao.append(div_foto)
+        publicacao.append(footer)
+        publicacao.append(divisao)
+
+        nome.setAttribute("onclick","abrirPerfil()")
+
+        partilhar.alt="partilhar"
         perfil.alt="foto_perfil"
+        gosto.alt="gosto"
+        comentar.alt="comentar"
 
-        foto.src="../Imagens/fotosgaleria/galeria"+ aleatorio()+".png"
-        foto.alt="imagem da galeria"+aleatorio()
+        perfil.src="../Imagens/usuarios/"+usuarios[i].imagens+"/perfil.jpg"
+        foto_publicada.src="../Imagens/usuarios/"+usuarios[i].imagens+"/img"+j +".jpg"
         
-        contfotos=contfotos+1
-    }
+        gosto.src="../Imagens/Icones/Gosto.svg"
+        comentar.src="../Imagens/Icones/comentario.svg"
+        partilhar.src="../Imagens/Icones/partilhar.svg"
+        j=j+1
+        }
     
 }
 
