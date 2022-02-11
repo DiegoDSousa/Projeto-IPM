@@ -1,5 +1,5 @@
 @font-face { font-family: BakbakOne; src: url('../Fonts/Anime\ Inept.otf'); } 
-
+@font-face { font-family: Poppins; src: url('../Fonts/Poppins/Poppins-Light.ttf'); } 
 *{
     margin: 0;
     padding: 0;
@@ -19,11 +19,13 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;  
+    align-items: flex-end; 
+    position: relative; 
 }
 .heard{
     position:fixed;
     top:0;
+    left: 0;
     background-color: white;
     z-index: 99;
 }
@@ -109,7 +111,7 @@ body{
     align-items: center;
     background-color: #FDFFE2;
     padding: 5px;
-    gap:2%
+    gap:10%
 }
 .paginas img{
     width: 40px;
@@ -117,4 +119,125 @@ body{
 }
 .paginas img:hover{
     transform: scale(1.3);
+}
+/*-------------------------Conteudo feed--------*/
+
+
+.main_conteudo{
+    align-self: start;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    margin-top: 106px;
+    font-family: Poppins
+    
+}
+/*-------------------------Esquerda--------*/
+.main_esc{
+    
+    width: 20%;
+    border-left-style: 3px solid black;
+}
+/*-------------------------Conteudo--------*/
+#conteudo{
+   background-color: #FDFFE2;
+   width: 60%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap:10px
+}
+.post_box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    
+}
+.user_box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    gap:10px;
+    padding-left: 10px;
+    
+}
+.user_box .nome{
+    font-size: 1.1em;
+    font-weight: 1000;
+}
+.perfil_icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.post_post_img_box{
+    width: 100%;
+    
+}
+.post_img{
+    max-width: 100%; 
+}
+.rection_box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    gap:10px;
+    padding-left: 10px;
+}
+
+/*-------------------------Direita--------*/
+.main_dir{
+    width: 20%;
+    height: 100vh;
+    border-left-style: 3px solid black;
+}
+
+
+@media only screen and (max-width: 500px) {
+    .main_esc{
+        display: none;
+    }
+    #conteudo{
+        width: 100%;
+    }
+
+    .main_dir{
+        display: none;
+    }
+    .box_pesquisar{
+        display: none;
+    }
+    .pesquisar img{
+        width: 40px;
+        height: 40px; 
+        margin-left: 10px;
+    }    
+.perfil .icon_perfil img{
+    width: 35px;
+    height: 35px;
+}
+.perfil .icon_perfil{
+    margin-right:0px;
+}
+.perfil .logo{
+    margin-right:5px;
+}
+
+.perfil .logo img{
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+}
+.paginas img{
+    width: 30px;
+    height: 30px;
+}
+
 }
