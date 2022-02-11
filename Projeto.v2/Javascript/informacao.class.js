@@ -14,7 +14,7 @@ var usuarios=[
     },  {
         "nome":"Leticia Zego",
         "descricao":"Sem nada a dizer",
-        "imagens":"Leticia",
+        "imagens":"leticia",
         "numero_fotos":3,
         "id":3,
     },  {

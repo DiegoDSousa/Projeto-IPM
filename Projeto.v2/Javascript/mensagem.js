@@ -1,8 +1,8 @@
-import nomes from './informacao.class.js'
+import usuarios from './informacao.class.js'
 
 var conteudo_div=document.getElementById('conteudo')
 
- var num_pefis=nomes.length-1
+ var num_pefis=usuarios.length-1
 for (let i = 1; i <=num_pefis; i++) {
     /*criado*/
     var conteudo=document.createElement('DIV')
@@ -30,19 +30,29 @@ for (let i = 1; i <=num_pefis; i++) {
     
     /*ligaçãos*/
     user_icon.append(foto,user_status)
-    paragrafo_nome.append(nomes[i])
+    paragrafo_nome.append(usuarios[i].nome)
     paragrafo_sms.append(sms)
     user_description.append(paragrafo_nome,paragrafo_sms)
     user.append(user_icon,user_description)
     conteudo.append(user)
     conteudo_div.append(conteudo)
-    user.addEventListener('click',clicado)
-    foto.src="../Imagens/Imagensperfilpequenas/perfil"+ i +".png"
+    paragrafo_nome.addEventListener('click',clicado)
+    foto.src="../Imagens/usuarios/"+usuarios[i].imagens+"/perfil.jpg"
    
 }
 
 
 
 function clicado(){
+    addEventListener("click",function(e){
+        var elemento= e.target
+        elemento.id="riscado"
+        var aqui=document.getElementById("riscado").innerHTML
+        
+
+        localStorage.nome=aqui
+        
+        console.log(aqui)
+    })
     window.location="../HTML/mensagens_enviar.html"
 }

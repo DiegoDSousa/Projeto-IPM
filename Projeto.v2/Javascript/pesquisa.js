@@ -1,9 +1,41 @@
-var nomes=["João Antonio","Raquel Maria","Rafael Antonio","Mario Andrade","Rafaela Simone",
-"Rita Perreira","Guilherme Reis","Helena Gomes"]
+var usuarios=[
+    {
+        "nome":"Nuno Lima",
+        "descricao":"Sem nada a dizer",
+        "imagens":"nuno",
+        "numero_fotos":4,
+        "id":1,
+    },  {
+        "nome":"Diego Sousa",
+        "descricao":"Sem nada a dizer",
+        "imagens":"diego",
+        "numero_fotos":5,
+        "id":2,
+    },  {
+        "nome":"Leticia Zego",
+        "descricao":"Sem nada a dizer",
+        "imagens":"leticia",
+        "numero_fotos":3,
+        "id":3,
+    },  {
+        "nome":"William Carvalho",
+        "descricao":"Sem nada a dizer",
+        "imagens":"willi",
+        "numero_fotos":3,
+        "id":4,
+    }
+
+
+
+
+]
+
 
 var nomePesquisado=document.getElementById("pesquisar").value
+
 function redirecionar(){
     document.getElementById("pesquisar").value=""
+    console.log(localStorage.nome)
     window.location="../HTML/perfil.html"
 }
 
@@ -14,13 +46,13 @@ function pesquisar(){
     nomePesquisado=nomePesquisado.toLocaleLowerCase()
     var auxiliar=[]
     var i
-    for(i in nomes){
-        auxiliar[i]=nomes[i].toLocaleLowerCase()
+    for(i in usuarios){
+        auxiliar[i]=usuarios[i].nome.toLocaleLowerCase()
     }
     i=0
     var n
     
-    for(i in nomes){
+    for(i in usuarios){
         if(nomePesquisado==auxiliar[i]){
             var lista=document.createElement('LI')
             var nome=document.createElement('P')
@@ -28,22 +60,17 @@ function pesquisar(){
             lista.setAttribute("onclick","redirecionar()")
             document.getElementById("lista").append(lista)
             lista.append(foto)
-            nome.append(nomes[i])
+            localStorage.clear()
+            localStorage.nome=usuarios[i].nome
+            nome.append(usuarios[i].nome)
             lista.append(nome)
-            localStorage.nome=nomes[i]
-            foto.src="../Imagens/ImagensPerfilPequenas/perfil"+i+".png"
+            foto.src="../Imagens/usuarios/"+usuarios[i].imagens+"/perfil.jpg"
             foto.alt="imagem de perfil"
             return
         }
     }
     
         return usuarioNaoEncontrado()
-    
-    
-        
-
-    
-    
 }
 function usuarioNaoEncontrado(){
     var lista=document.createElement('LI')
@@ -52,25 +79,3 @@ function usuarioNaoEncontrado(){
     
 }
 
-/*
-var t=""
-for(var i in nomes){
-   t+="<li>"+nomes[i]+"</li>"
-   
-   nomes[i]=nomes[i].toLowerCase()
-}
-lista.innerHTML=t
-
-nomePesquisado.onkeyup=function(e){
-    
-    t =this.value
-    var r= new RegExp(t,"g")
-    for(i in nomes){
-        lista.children[i].style.display="none"
-        if(nomes[i].match(r)){
-            lista.children[i].removeAttribute("style")
-        }
-        
-    }
-}
-*/

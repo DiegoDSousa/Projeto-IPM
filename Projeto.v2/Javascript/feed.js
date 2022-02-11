@@ -46,8 +46,8 @@ function criar(){
     gosto.alt="gosto"
     comentar.alt="comentar"
 
-    perfil.src="../Imagens/Imagensperfilpequenas/perfil"+ i +".png"
-    foto_publicada.src="../Imagens/Imagenspublicadas/publicacao"+ i +".png"
+    perfil.src="../Imagens/usuarios/"+usuarios[i].imagens+"/perfil.jpg"
+    foto_publicada.src="../Imagens/usuarios/"+usuarios[i].imagens+"/img"+j +".jpg"
     icone_img.src="../Imagens/Icones/editar.svg"
     gosto.src="../Imagens/Icones/Gosto.svg"
     comentar.src="../Imagens/Icones/comentario.svg"
@@ -55,9 +55,15 @@ function criar(){
 
 
 }  
-
-while (i <= length(Usuarios)) {
-    criar()
+console.log(usuarios[3].imagens)
+var j=0
+while (i <= usuarios.length) {
+    console.log(usuarios[i].numero_fotos)
+   while(j < usuarios[i].numero_fotos){
+        criar()
+        j=j+1
+    }
+    j=0
     i = i + 1;
 }  
 
