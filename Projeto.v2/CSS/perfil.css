@@ -68,6 +68,13 @@
      align-items: center;
      height: auto;
  }
+ .descricao_box .descricao{
+     background-color: #FDFFE2;
+     padding: 4px;
+     width: 280px;
+     height: 40px;
+     max-height: auto;
+ }
  li .numero .classificacao{
      align-items: center;
  }
