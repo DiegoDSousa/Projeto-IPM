@@ -157,7 +157,7 @@ function criarGaleria(){
     titulo.append("Galeria")
 
     var contfotos=0
-    while(contfotos<=6){
+    while(contfotos<usuarios[i].numero_fotos){
         
         var foto=document.createElement('IMG')
         var containerfoto=document.createElement('DIV')
@@ -185,9 +185,9 @@ function criarGaleria(){
         perfil.src="../Imagens/usuarios/"+usuarios[i].imagens+"/perfil.jpg"
         icone_img.src="../Imagens/Icones/editar.svg"
         perfil.alt="foto_perfil"
-
-        foto.src="../Imagens/fotosgaleria/galeria"+ aleatorio()+".png"
-        foto.alt="imagem da galeria"+aleatorio()
+        
+        foto.src="../Imagens/usuarios/"+usuarios[i].imagens+"/img"+contfotos +".jpg"
+        foto.alt="imagem da galeria"+contfotos
         
         contfotos=contfotos+1
     }
@@ -201,8 +201,3 @@ criarHeader()
 
 criarRotas()
 criarGaleria()
-var a
-while(a<7){
-    criarDestaques()
-    a=a+1
-}
