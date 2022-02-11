@@ -1,8 +1,11 @@
+@font-face { font-family: BakbakOne; src: url('../Fonts/Anime\ Inept.otf'); } 
+@font-face { font-family: Popittins; src: url('../Fonts/Poppins/Poppins-Light.ttf') } 
+
 *{
     margin: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family:"Quicksand",sans-serif;
+    font-family:"Popittins",sans-serif;
 
 }
 
@@ -10,10 +13,27 @@ html{
     font-size: 62.5%;
 }
 
+
+.heard_box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;  
+    background-color: #FDFFE2;
+    width: 100vw;
+    height: 65px;
+    font-family:BakbakOne
+    
+}
+.heard_box h1{
+    font-weight: 800;
+    color:#D7E365
+}
+
 .conteiner{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    background-color: #121211;
+    background-color: #FDFFE2;
     color: #eee;
     display: flex;
     justify-content: center;
@@ -24,20 +44,20 @@ html{
 
     width: 45rem;
     height: 52rem;
-    background-color: #222227;
-    box-shadow: 0.5rem 3rem rgba(0,0 ,0 ,0.4 );
+    background-color: #FDFFE2;
+    box-shadow: #FDFFE2;
 }
 
 .month{
     width: 100%;
     height: 12rem;
-    background-color: #167e56;
+    background-color: #A9B722;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
     text-align: center;
-    text-shadow: 0.3rem .5rem rgba(0,0 ,0 ,0.5 ) ;
+   
 
 
 
@@ -80,8 +100,8 @@ margin-bottom: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-shadow: 0.3rem .5rem rgba(0,0 ,0 ,0.5 );
-
+    color: #A9B722;
+   
 }
 
 .days{
@@ -98,13 +118,13 @@ margin-bottom: 1rem;
     height: 5rem;
     display: flex;
     align-items: center;
-    text-shadow: 0.3rem .5rem rgba(0,0 ,0 ,0.5 );
+    color: #A9B722;
     transition: bacckground-color 0.2s;
 
 }
 .days div:hover:not(.today){
-    background-color: #262626;
-    border: 2rem solid #777;
+    background-color: white;
+    border: 2rem solid ;
     cursor: pointer;
 }
 
@@ -114,5 +134,7 @@ margin-bottom: 1rem;
 }
 
 .today{
-    background-color: #167e56;
+    background-color: #A9B722;
+   
+    color: #eee;
 }

@@ -1,12 +1,12 @@
 @font-face { font-family: BakbakOne; src: url('../Fonts/Anime\ Inept.otf'); } 
-
+@font-face { font-family: Popittins; src: url('../Fonts/Poppins/Poppins-Light.ttf') } 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body{
-    font-family: BakbakOne;
+    font-family: Popittins;
     
     display: flex;
     flex-direction: column;
