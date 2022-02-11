@@ -55,10 +55,11 @@ function criar(){
 
 
 }  
-console.log(usuarios[3].imagens)
+
 var j=0
+
 while (i <= usuarios.length) {
-    console.log(usuarios[i].numero_fotos)
+
    while(j < usuarios[i].numero_fotos){
         criar()
         j=j+1
