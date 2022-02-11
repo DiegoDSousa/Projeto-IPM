@@ -1,98 +1,163 @@
 @font-face { font-family: BakbakOne; src: url('../Fonts/Anime\ Inept.otf'); } 
 @font-face { font-family: Poppins; src: url('../Fonts/Poppins/Poppins-Light.ttf'); }
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-body{
-    background-color: #FDFFE2;
-    font-family: Poppins;
-}
-.header{
-    display: flex;
-    gap: 10px;
-   
-    height: 200px;
 
-    align-items: center;
-    
+.perfil{
+    width: 40px;
+    height: 40px;
+}
+ .header{
+     display: flex;
+     margin-top: 40px;
+     margin-left: 20px;
+     margin-right: auto;
+     gap: 10px;
+ 
+ }
+ .headerfoto{
+     display: flex;
+     margin-top: 20px;
+     margin-left: 5px;
+     width: 380px;
+     margin-bottom: 15px;
+     gap: 15%;
+     
+ }
+ .numero{
+     width: 15%;
+     
+     height: 14px;
+     float: left;
+ }
+ .classificacao{
+     position: relative;
+     text-align: center;
+     color: #A9B722;
+     font-weight: bold;
+ }
+ .pontos{
+     margin-top: 12px;
+     margin-left: 20px;
+     color: #A9B722;
+     font-weight: bold;
+     font-size: 22px;
+ }
+ 
+ .percentagem{
+     background-color: #A9B722;
+     border-radius: 4px;
+     height: 14px;
+ }
+ .g1{
+     width: 7%;
+ }
+ .g2{
+     width: 49%;
+ }
+ .g3{
+     width: 30%;
+ }
+ .g4{
+     width: 60%;
+ }
+ .g5{
+     width: 29%;
+ }
+ li{
+     display: flex;
+     margin-top: 12px;
+ }
+ .grafico{
+     width: 265px;
+     background-color: #CADA32;
+     border-radius: 4px;
+     height: 14px;
+     margin-left: 4px;
+     float: left;
+ }
+ .estatisticas ol{
+     list-style: none;
+     background-color: #FDFFE2;
+     padding: 5px;
+     padding-right: 40px;
+     height: 212px;
+     width: 318px;
+     margin-top: 20px;
+     margin-left: auto;
+     margin-right: auto;
+ }
+ 
+ .nome{
+     height:auto;
+     width: auto;
+     font-size: 18px;
+     font-weight: bold;
+ }
+ .nome p{
+     height: auto;
+     width: auto;
+     align-items: center;
+ 
+ }
+ .teste{
+     width: 400px;
+     height: 30px;
+     
+ }
 
-}
-.header img{
-    max-width: 180px;
-    max-height: 180px;
-    width: 100%;
-    height: 100%;
-    margin-left: 20px;
-    border-radius: 50%;
-}
-.descricao_box{
-    padding: 35px;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-    align-items: flex-start;
-}
-.nome{
-    font-weight: 1000;
-    font-size: 2.5em;
-    font-family: BakbakOne;
-    color: #A9B722;
-}
-.descricao{
-    color:#D7E365;
-}
-.destaques{
-    padding: 15px
-}
-.destaques h2{
-    font-weight: 1000;
-    font-size: 2.5em;
-    font-family: BakbakOne;
-    color: #A9B722;
-}
-.destaques button{
-    border: none;
-    background-color: transparent;
-}
-.stories-wraper{
-    position: relative;
-    background-color: aqua;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 90%;
-    height: 150px;
-    gap: 10px;
-    padding: 15px;
-    flex-wrap: nowrap;
-}
+ .header .conteudo{
+     display: flex;
+     flex-direction: column;
+     
+ }
+ .containerRotas{
+     background-color: #FDFFE2;
+     overflow: auto;
+     white-space: nowrap;
+     -ms-overflow-style: none;
+     scrollbar-width: none;
+ }
+ 
+ .publicacao{
+     background-color: white;
+     position:unset;
+     margin-top: 2px;
+     margin-left: auto;
+     margin-right: auto;
+     max-width: 380px;
+     height: 448;
+ }
 
+ .foto_publicada{
+     margin-left: 0px;
+     width:100%;
+     height: auto;
+     margin-top:10px ;
+ }
 
-   .perfil{
-       width: 40px;
-       height: 40px;
-   }
-    .header{
-        display: flex;
-        margin-top: 40px;
-        margin-left: 20px;
-        margin-right: auto;
-        gap: 10px;
-    
-    width: 100px;
-    height: 100px;
-}
-.title{
-color: #A9B722;
-font-weight: 800;
-font-size: 1em;
-}
-.profile img{
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-}
+ .containerRotas::-webkit-scrollbar{
+     display: none;
+ }
+ .containerRotas .imagemRota{
+     display: inline-block;
+     text-align: center;
+     padding: 14px;
+     text-decoration: none;
+ }
+ 
+ .header .conteudo .descricao{
+     margin-top: 10px;
+     width: 230px;
+     height: auto;
+     background-color: #FDFFE2;
+     padding: 5px;
+ }
+ 
+ .destaques{
+     margin-top: 20px;
+ }
+ .titulo{
+     margin-left: 5px;
+     margin-top: 10px;
+     padding: 4px;
+     
+ }
