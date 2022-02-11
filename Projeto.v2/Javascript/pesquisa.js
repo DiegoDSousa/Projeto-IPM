@@ -48,7 +48,7 @@ function redirecionar(){
 
 
 function pesquisar(){
-     
+    var pesquisados_box=document.getElementById("lista")
     document.getElementById("lista").innerHTML=''
     var nomePesquisado=document.getElementById("pesquisar").value
     nomePesquisado=nomePesquisado.toLocaleLowerCase()
@@ -62,19 +62,35 @@ function pesquisar(){
     
     for(i in usuarios){
         if(nomePesquisado==auxiliar[i]){
-            var lista=document.createElement('LI')
-            var nome=document.createElement('P')
-            var foto=document.createElement('IMG')
-            lista.setAttribute("onclick","redirecionar()")
-            document.getElementById("lista").append(lista)
-            lista.append(foto)
-            localStorage.clear()
-            localStorage.nome=usuarios[i].nome
-            nome.append(usuarios[i].nome)
-            lista.append(nome)
-            foto.src="../Imagens/usuarios/"+usuarios[i].imagens+"/perfil.jpg"
-            foto.alt="imagem de perfil"
-            return
+        
+    var user=document.createElement('DIV')
+    var user_icon=document.createElement('DIV')
+    var user_description=document.createElement('DIV')
+    var foto=document.createElement('IMG')
+    var user_status=document.createElement('DIV')
+    var nome=document.createElement('P')
+    var description=document.createElement('P')
+    
+    
+    foto.classList.add("perfil_icon")
+    user_status.classList.add("user_status")
+    user.classList.add("user_box")
+    user_description.classList.add("user_description")
+    user_icon.classList.add("user_icon")
+    description.classList.add("description")
+    nome.classList.add("nome")
+    
+    
+    foto.src="../Imagens/usuarios/"+usuarios[i].imagens+"/perfil.jpg"
+    user_status.innerHTML=""
+    nome.innerText=usuarios[i].nome
+    description.innerHTML="Sem nada a dizer"
+    
+    
+    user_icon.append(foto,user_status)
+    user_description.append(nome,description)
+    user.append(user_icon,user_description)
+    pesquisados_box.append(user)
         }
     }
     
@@ -122,4 +138,3 @@ function criar_perfil(){
     }
   
 
-criar_perfil()

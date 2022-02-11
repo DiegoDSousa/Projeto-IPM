@@ -6,6 +6,7 @@
     box-sizing: border-box;
 }
 .heard_box{
+    font-family: Poppins;
     display: flex;
     align-items: center;
     justify-content: center;

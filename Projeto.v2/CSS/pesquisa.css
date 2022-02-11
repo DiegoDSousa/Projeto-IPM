@@ -3,10 +3,15 @@
 
 body{
     height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-family: Poppins;
+    height: 100vh;
 }
 .header {
     display: flex;
@@ -55,6 +60,7 @@ body{
     height: 100%;
     width: auto;
     border-radius: 2px;
+    cursor: pointer;
 }
 
 .pesquisa{
@@ -92,7 +98,31 @@ body{
 }
 
 
-.resultadoPesquisa #lista li{
-    list-style-type: none;
+#box_perfil{
+    display: flex;
+    background-color: rgb(243, 243, 243);
+    height: 150px;
+    align-items: center;
+    cursor: pointer;
 }
-
+.user_box{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    margin-left: 20px;
+}
+.user_icon img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.user_description{
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.user_description .nome{
+    font-weight: 1000;
+    font-size: 2em;
+    font-family: BakbakOne;
+}
